@@ -1,4 +1,16 @@
 {
-  "tickets": [],
-  "updated_at": "2026-05-03T19:23:37.392Z"
+  "tickets": [
+    {
+      "id": "T-1",
+      "path": ".repomind/tickets/T-1-auth.md",
+      "title": "auth",
+      "status": "backlog",
+      "priority": "medium",
+      "complexity": "M",
+      "updated_at": "2026-05-03T19:26:36.371Z"
+    }
+  ],
+  "last_commit": "e87410eed2a55569880acd56a04252d8158682a5",
+  "updated_at": "2026-05-03T19:26:39.666Z",
+  "checksum": "10c6cefbce0d023b75566c43855998081293a927bf2f0fa2a5b51df71cd4feac"
 }
