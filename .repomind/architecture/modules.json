@@ -1,287 +1,356 @@
 {
   "modules": [
     {
-      "id": "sdk-core",
-      "name": "sdk-core",
-      "path": "sdk/src/core.js",
-      "summary": "Core functionalities for the SDK, providing foundational utilities.",
-      "dependencies": []
-    },
-    {
-      "id": "sdk-module-navigate",
-      "name": "sdk-module-navigate",
-      "path": "sdk/src/modules/navigate.js",
-      "summary": "Module for navigation automation within the SDK.",
-      "dependencies": [
-        "sdk-core"
-      ]
-    },
-    {
-      "id": "sdk-module-search",
-      "name": "sdk-module-search",
-      "path": "sdk/src/modules/search.js",
-      "summary": "Module for search automation within the SDK.",
-      "dependencies": [
-        "sdk-core"
-      ]
-    },
-    {
-      "id": "sdk-module-smart-scroll",
-      "name": "sdk-module-smart-scroll",
-      "path": "sdk/src/modules/smart-scroll.js",
-      "summary": "Module for intelligent scrolling automation within the SDK.",
-      "dependencies": [
-        "sdk-core"
-      ]
-    },
-    {
-      "id": "sdk-module-voice-fill",
-      "name": "sdk-module-voice-fill",
-      "path": "sdk/src/modules/voice-fill.js",
-      "summary": "Module for voice input filling automation.",
-      "dependencies": [
-        "sdk-core"
-      ]
-    },
-    {
-      "id": "sdk-module-test-voice-fill",
-      "name": "sdk-module-test-voice-fill",
-      "path": "sdk/src/modules/test-voice-fill.js",
-      "summary": "Test module for voice input filling functionalities.",
-      "dependencies": [
-        "sdk-module-voice-fill",
-        "sdk-core"
-      ]
-    },
-    {
-      "id": "sdk-voice-engine",
-      "name": "sdk-voice-engine",
-      "path": "sdk/src/voice-engine.js",
-      "summary": "Orchestrates voice-related automation features.",
-      "dependencies": [
-        "sdk-module-voice-fill"
-      ]
-    },
-    {
-      "id": "sdk-index",
-      "name": "sdk-index",
-      "path": "sdk/src/index.js",
-      "summary": "Main entry point for the SDK source code, aggregating all features.",
-      "dependencies": [
-        "sdk-core",
-        "sdk-voice-engine",
-        "sdk-module-navigate",
-        "sdk-module-search",
-        "sdk-module-smart-scroll"
-      ]
-    },
-    {
-      "id": "rollup",
-      "name": "rollup",
-      "path": "sdk/node_modules/rollup",
-      "summary": "JavaScript module bundler used for building the SDK.",
-      "dependencies": [
-        "acorn",
-        "smob",
-        "source-map"
-      ]
-    },
-    {
-      "id": "@rollup/plugin-terser",
-      "name": "@rollup/plugin-terser",
-      "path": "sdk/node_modules/@rollup/plugin-terser",
-      "summary": "Rollup plugin for minifying output using Terser.",
-      "dependencies": [
-        "terser",
-        "rollup"
-      ]
-    },
-    {
-      "id": "sdk-rollup-config",
-      "name": "sdk-rollup-config",
-      "path": "sdk/rollup.config.js",
-      "summary": "Rollup configuration file for the SDK build process.",
-      "dependencies": [
-        "rollup",
-        "@rollup/plugin-terser",
-        "sdk-index"
-      ]
-    },
-    {
-      "id": "ai-automation-sdk-esm",
-      "name": "ai-automation-sdk-esm",
-      "path": "sdk/dist/ai-automation-sdk.esm.js",
-      "summary": "ES Module build of the AI Automation SDK.",
-      "dependencies": [
-        "sdk-rollup-config"
-      ]
-    },
-    {
-      "id": "ai-automation-sdk-min",
-      "name": "ai-automation-sdk-min",
-      "path": "sdk/dist/ai-automation-sdk.min.js",
-      "summary": "Minified build of the AI Automation SDK.",
-      "dependencies": [
-        "sdk-rollup-config"
-      ]
-    },
-    {
-      "id": "ai-automation-sdk-docs-min",
-      "name": "ai-automation-sdk-docs-min",
+      "id": "ai-automation-sdk",
+      "name": "AI-AUTOMATION-SDK",
       "path": "docs/ai-automation-sdk.min.js",
-      "summary": "Minified SDK version specifically for documentation pages.",
-      "dependencies": [
-        "ai-automation-sdk-min"
-      ]
-    },
-    {
-      "id": "docs-scripts",
-      "name": "docs-scripts",
-      "path": "docs/scripts/docs.js",
-      "summary": "JavaScript scripts for the documentation website.",
-      "dependencies": [
-        "ai-automation-sdk-docs-min"
-      ]
-    },
-    {
-      "id": "sdk-test-sort",
-      "name": "sdk-test-sort",
-      "path": "sdk/test-sort.js",
-      "summary": "A standalone test script for sorting functionality.",
+      "summary": "Source module detected via static scan.",
       "dependencies": []
     },
     {
-      "id": "terser",
-      "name": "terser",
-      "path": "sdk/node_modules/terser",
-      "summary": "JavaScript parser, mangler, and compressor toolkit.",
-      "dependencies": [
-        "acorn",
-        "source-map",
-        "commander",
-        "serialize-javascript"
-      ]
+      "id": "docs",
+      "name": "DOCS",
+      "path": "docs/scripts/docs.js",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
     },
     {
-      "id": "acorn",
-      "name": "acorn",
-      "path": "sdk/node_modules/acorn",
-      "summary": "A small, fast, JavaScript-based JavaScript parser.",
+      "id": "ai-automation-sdk",
+      "name": "AI-AUTOMATION-SDK",
+      "path": "sdk/dist/ai-automation-sdk.esm.js",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "ai-automation-sdk",
+      "name": "AI-AUTOMATION-SDK",
+      "path": "sdk/dist/ai-automation-sdk.min.js",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "gen-mapping",
+      "name": "GEN-MAPPING",
+      "path": "sdk/node_modules/@jridgewell/gen-mapping/dist/gen-mapping.mjs",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "gen-mapping",
+      "name": "GEN-MAPPING",
+      "path": "sdk/node_modules/@jridgewell/gen-mapping/dist/gen-mapping.umd.js",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "gen-mapping",
+      "name": "GEN-MAPPING",
+      "path": "sdk/node_modules/@jridgewell/gen-mapping/dist/types/gen-mapping.d.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "set-array",
+      "name": "SET-ARRAY",
+      "path": "sdk/node_modules/@jridgewell/gen-mapping/dist/types/set-array.d.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "sourcemap-segment",
+      "name": "SOURCEMAP-SEGMENT",
+      "path": "sdk/node_modules/@jridgewell/gen-mapping/dist/types/sourcemap-segment.d.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "types",
+      "name": "TYPES",
+      "path": "sdk/node_modules/@jridgewell/gen-mapping/dist/types/types.d.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "gen-mapping",
+      "name": "GEN-MAPPING",
+      "path": "sdk/node_modules/@jridgewell/gen-mapping/src/gen-mapping.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "set-array",
+      "name": "SET-ARRAY",
+      "path": "sdk/node_modules/@jridgewell/gen-mapping/src/set-array.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "sourcemap-segment",
+      "name": "SOURCEMAP-SEGMENT",
+      "path": "sdk/node_modules/@jridgewell/gen-mapping/src/sourcemap-segment.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "types",
+      "name": "TYPES",
+      "path": "sdk/node_modules/@jridgewell/gen-mapping/src/types.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "resolve-uri",
+      "name": "RESOLVE-URI",
+      "path": "sdk/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.mjs",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "resolve-uri",
+      "name": "RESOLVE-URI",
+      "path": "sdk/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.umd.js",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "resolve-uri",
+      "name": "RESOLVE-URI",
+      "path": "sdk/node_modules/@jridgewell/resolve-uri/dist/types/resolve-uri.d.ts",
+      "summary": "Source module detected via static scan.",
       "dependencies": []
     },
     {
       "id": "source-map",
-      "name": "source-map",
-      "path": "sdk/node_modules/source-map",
-      "summary": "Library for consuming and producing source maps.",
+      "name": "SOURCE-MAP",
+      "path": "sdk/node_modules/@jridgewell/source-map/dist/source-map.mjs",
+      "summary": "Source module detected via static scan.",
       "dependencies": []
     },
     {
-      "id": "commander",
-      "name": "commander",
-      "path": "sdk/node_modules/commander",
-      "summary": "Node.js command-line interfaces made easy.",
+      "id": "source-map",
+      "name": "SOURCE-MAP",
+      "path": "sdk/node_modules/@jridgewell/source-map/dist/source-map.umd.js",
+      "summary": "Source module detected via static scan.",
       "dependencies": []
     },
     {
-      "id": "serialize-javascript",
-      "name": "serialize-javascript",
-      "path": "sdk/node_modules/serialize-javascript",
-      "summary": "Serializes JavaScript to a superset of JSON.",
+      "id": "source-map",
+      "name": "SOURCE-MAP",
+      "path": "sdk/node_modules/@jridgewell/source-map/src/source-map.ts",
+      "summary": "Source module detected via static scan.",
       "dependencies": []
     },
     {
-      "id": "@jridgewell/gen-mapping",
-      "name": "@jridgewell/gen-mapping",
-      "path": "sdk/node_modules/@jridgewell/gen-mapping",
-      "summary": "Generates source maps efficiently.",
-      "dependencies": [
-        "@jridgewell/sourcemap-codec"
-      ]
-    },
-    {
-      "id": "@jridgewell/resolve-uri",
-      "name": "@jridgewell/resolve-uri",
-      "path": "sdk/node_modules/@jridgewell/resolve-uri",
-      "summary": "Resolves URIs for source map processing.",
+      "id": "sourcemap-codec",
+      "name": "SOURCEMAP-CODEC",
+      "path": "sdk/node_modules/@jridgewell/sourcemap-codec/dist/sourcemap-codec.mjs",
+      "summary": "Source module detected via static scan.",
       "dependencies": []
     },
     {
-      "id": "@jridgewell/source-map",
-      "name": "@jridgewell/source-map",
-      "path": "sdk/node_modules/@jridgewell/source-map",
-      "summary": "A fast and efficient source map library.",
-      "dependencies": [
-        "@jridgewell/sourcemap-codec",
-        "@jridgewell/trace-mapping",
-        "@jridgewell/gen-mapping",
-        "@jridgewell/resolve-uri"
-      ]
-    },
-    {
-      "id": "@jridgewell/sourcemap-codec",
-      "name": "@jridgewell/sourcemap-codec",
-      "path": "sdk/node_modules/@jridgewell/sourcemap-codec",
-      "summary": "Encodes and decodes source map VLQ mappings.",
+      "id": "sourcemap-codec",
+      "name": "SOURCEMAP-CODEC",
+      "path": "sdk/node_modules/@jridgewell/sourcemap-codec/dist/sourcemap-codec.umd.js",
+      "summary": "Source module detected via static scan.",
       "dependencies": []
     },
     {
-      "id": "@jridgewell/trace-mapping",
-      "name": "@jridgewell/trace-mapping",
-      "path": "sdk/node_modules/@jridgewell/trace-mapping",
-      "summary": "Traces mappings within source maps.",
-      "dependencies": [
-        "@jridgewell/sourcemap-codec"
-      ]
-    },
-    {
-      "id": "@types/estree",
-      "name": "@types/estree",
-      "path": "sdk/node_modules/@types/estree",
-      "summary": "TypeScript type definitions for the ESTree AST format.",
+      "id": "scopes",
+      "name": "SCOPES",
+      "path": "sdk/node_modules/@jridgewell/sourcemap-codec/src/scopes.ts",
+      "summary": "Source module detected via static scan.",
       "dependencies": []
     },
     {
-      "id": "buffer-from",
-      "name": "buffer-from",
-      "path": "sdk/node_modules/buffer-from",
-      "summary": "A polyfill for Node.js `Buffer.from()`.",
-      "dependencies": [
-        "safe-buffer"
-      ]
-    },
-    {
-      "id": "randombytes",
-      "name": "randombytes",
-      "path": "sdk/node_modules/randombytes",
-      "summary": "Generates cryptographically strong pseudo-random data.",
-      "dependencies": [
-        "buffer-from"
-      ]
-    },
-    {
-      "id": "safe-buffer",
-      "name": "safe-buffer",
-      "path": "sdk/node_modules/safe-buffer",
-      "summary": "Provides a safer Node.js Buffer API.",
+      "id": "sourcemap-codec",
+      "name": "SOURCEMAP-CODEC",
+      "path": "sdk/node_modules/@jridgewell/sourcemap-codec/src/sourcemap-codec.ts",
+      "summary": "Source module detected via static scan.",
       "dependencies": []
     },
     {
-      "id": "smob",
-      "name": "smob",
-      "path": "sdk/node_modules/smob",
-      "summary": "Small object manipulation library.",
+      "id": "strings",
+      "name": "STRINGS",
+      "path": "sdk/node_modules/@jridgewell/sourcemap-codec/src/strings.ts",
+      "summary": "Source module detected via static scan.",
       "dependencies": []
     },
     {
-      "id": "source-map-support",
-      "name": "source-map-support",
-      "path": "sdk/node_modules/source-map-support",
-      "summary": "Adds source map support to stack traces in Node.js.",
-      "dependencies": [
-        "source-map"
-      ]
+      "id": "vlq",
+      "name": "VLQ",
+      "path": "sdk/node_modules/@jridgewell/sourcemap-codec/src/vlq.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "trace-mapping",
+      "name": "TRACE-MAPPING",
+      "path": "sdk/node_modules/@jridgewell/trace-mapping/dist/trace-mapping.mjs",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "trace-mapping",
+      "name": "TRACE-MAPPING",
+      "path": "sdk/node_modules/@jridgewell/trace-mapping/dist/trace-mapping.umd.js",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "binary-search",
+      "name": "BINARY-SEARCH",
+      "path": "sdk/node_modules/@jridgewell/trace-mapping/src/binary-search.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "by-source",
+      "name": "BY-SOURCE",
+      "path": "sdk/node_modules/@jridgewell/trace-mapping/src/by-source.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "flatten-map",
+      "name": "FLATTEN-MAP",
+      "path": "sdk/node_modules/@jridgewell/trace-mapping/src/flatten-map.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "resolve",
+      "name": "RESOLVE",
+      "path": "sdk/node_modules/@jridgewell/trace-mapping/src/resolve.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "sort",
+      "name": "SORT",
+      "path": "sdk/node_modules/@jridgewell/trace-mapping/src/sort.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "sourcemap-segment",
+      "name": "SOURCEMAP-SEGMENT",
+      "path": "sdk/node_modules/@jridgewell/trace-mapping/src/sourcemap-segment.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "strip-filename",
+      "name": "STRIP-FILENAME",
+      "path": "sdk/node_modules/@jridgewell/trace-mapping/src/strip-filename.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "trace-mapping",
+      "name": "TRACE-MAPPING",
+      "path": "sdk/node_modules/@jridgewell/trace-mapping/src/trace-mapping.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "types",
+      "name": "TYPES",
+      "path": "sdk/node_modules/@jridgewell/trace-mapping/src/types.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "index",
+      "name": "INDEX",
+      "path": "sdk/node_modules/@rollup/plugin-terser/dist/cjs/index.js",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "index",
+      "name": "INDEX",
+      "path": "sdk/node_modules/@rollup/plugin-terser/dist/es/index.js",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "constants",
+      "name": "CONSTANTS",
+      "path": "sdk/node_modules/@rollup/plugin-terser/src/constants.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "index",
+      "name": "INDEX",
+      "path": "sdk/node_modules/@rollup/plugin-terser/src/index.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "module",
+      "name": "MODULE",
+      "path": "sdk/node_modules/@rollup/plugin-terser/src/module.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "type",
+      "name": "TYPE",
+      "path": "sdk/node_modules/@rollup/plugin-terser/src/type.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "worker-pool",
+      "name": "WORKER-POOL",
+      "path": "sdk/node_modules/@rollup/plugin-terser/src/worker-pool.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "worker",
+      "name": "WORKER",
+      "path": "sdk/node_modules/@rollup/plugin-terser/src/worker.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "index",
+      "name": "INDEX",
+      "path": "sdk/node_modules/@rollup/plugin-terser/types/index.d.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "flow",
+      "name": "FLOW",
+      "path": "sdk/node_modules/@types/estree/flow.d.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "index",
+      "name": "INDEX",
+      "path": "sdk/node_modules/@types/estree/index.d.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "acorn",
+      "name": "ACORN",
+      "path": "sdk/node_modules/acorn/dist/acorn.d.ts",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
+    },
+    {
+      "id": "acorn",
+      "name": "ACORN",
+      "path": "sdk/node_modules/acorn/dist/acorn.js",
+      "summary": "Source module detected via static scan.",
+      "dependencies": []
     }
   ],
-  "generated_at": "2026-05-03T19:28:48.135Z"
+  "generated_at": "2026-05-03T19:30:42.233Z",
+  "is_static": true
 }
