@@ -4,13 +4,13 @@
       "id": "T-1",
       "path": ".repomind/tickets/T-1-auth.md",
       "title": "auth",
-      "status": "backlog",
+      "status": "todo",
       "priority": "medium",
       "complexity": "M",
-      "updated_at": "2026-05-03T19:26:36.371Z"
+      "updated_at": "2026-05-03T19:27:12.343Z"
     }
   ],
-  "last_commit": "e87410eed2a55569880acd56a04252d8158682a5",
-  "updated_at": "2026-05-03T19:26:39.666Z",
-  "checksum": "10c6cefbce0d023b75566c43855998081293a927bf2f0fa2a5b51df71cd4feac"
+  "last_commit": "524b55bdfde018e9bcc6c99b54a89b94986a33c1",
+  "updated_at": "2026-05-03T19:27:16.136Z",
+  "checksum": "1aafc822c6ce7ef2f19c2a138e3471d25e1009618f7e0e5526ea711c0b2120f3"
 }
