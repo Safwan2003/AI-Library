@@ -1,7 +1,7 @@
 ---
 id: T-1
 title: auth
-status: backlog
+status: todo
 priority: medium
 complexity: M
 commits: []
@@ -9,7 +9,7 @@ blocked_by: []
 blocks: []
 tags: []
 created_at: 2026-05-03T19:26:36.371Z
-updated_at: 2026-05-03T19:26:36.371Z
+updated_at: 2026-05-03T19:27:12.343Z
 ---
 
 # auth
