@@ -1,4 +1,287 @@
 {
-  "modules": [],
-  "generated_at": "2026-05-03T19:23:37.392Z"
+  "modules": [
+    {
+      "id": "sdk-core",
+      "name": "sdk-core",
+      "path": "sdk/src/core.js",
+      "summary": "Core functionalities for the SDK, providing foundational utilities.",
+      "dependencies": []
+    },
+    {
+      "id": "sdk-module-navigate",
+      "name": "sdk-module-navigate",
+      "path": "sdk/src/modules/navigate.js",
+      "summary": "Module for navigation automation within the SDK.",
+      "dependencies": [
+        "sdk-core"
+      ]
+    },
+    {
+      "id": "sdk-module-search",
+      "name": "sdk-module-search",
+      "path": "sdk/src/modules/search.js",
+      "summary": "Module for search automation within the SDK.",
+      "dependencies": [
+        "sdk-core"
+      ]
+    },
+    {
+      "id": "sdk-module-smart-scroll",
+      "name": "sdk-module-smart-scroll",
+      "path": "sdk/src/modules/smart-scroll.js",
+      "summary": "Module for intelligent scrolling automation within the SDK.",
+      "dependencies": [
+        "sdk-core"
+      ]
+    },
+    {
+      "id": "sdk-module-voice-fill",
+      "name": "sdk-module-voice-fill",
+      "path": "sdk/src/modules/voice-fill.js",
+      "summary": "Module for voice input filling automation.",
+      "dependencies": [
+        "sdk-core"
+      ]
+    },
+    {
+      "id": "sdk-module-test-voice-fill",
+      "name": "sdk-module-test-voice-fill",
+      "path": "sdk/src/modules/test-voice-fill.js",
+      "summary": "Test module for voice input filling functionalities.",
+      "dependencies": [
+        "sdk-module-voice-fill",
+        "sdk-core"
+      ]
+    },
+    {
+      "id": "sdk-voice-engine",
+      "name": "sdk-voice-engine",
+      "path": "sdk/src/voice-engine.js",
+      "summary": "Orchestrates voice-related automation features.",
+      "dependencies": [
+        "sdk-module-voice-fill"
+      ]
+    },
+    {
+      "id": "sdk-index",
+      "name": "sdk-index",
+      "path": "sdk/src/index.js",
+      "summary": "Main entry point for the SDK source code, aggregating all features.",
+      "dependencies": [
+        "sdk-core",
+        "sdk-voice-engine",
+        "sdk-module-navigate",
+        "sdk-module-search",
+        "sdk-module-smart-scroll"
+      ]
+    },
+    {
+      "id": "rollup",
+      "name": "rollup",
+      "path": "sdk/node_modules/rollup",
+      "summary": "JavaScript module bundler used for building the SDK.",
+      "dependencies": [
+        "acorn",
+        "smob",
+        "source-map"
+      ]
+    },
+    {
+      "id": "@rollup/plugin-terser",
+      "name": "@rollup/plugin-terser",
+      "path": "sdk/node_modules/@rollup/plugin-terser",
+      "summary": "Rollup plugin for minifying output using Terser.",
+      "dependencies": [
+        "terser",
+        "rollup"
+      ]
+    },
+    {
+      "id": "sdk-rollup-config",
+      "name": "sdk-rollup-config",
+      "path": "sdk/rollup.config.js",
+      "summary": "Rollup configuration file for the SDK build process.",
+      "dependencies": [
+        "rollup",
+        "@rollup/plugin-terser",
+        "sdk-index"
+      ]
+    },
+    {
+      "id": "ai-automation-sdk-esm",
+      "name": "ai-automation-sdk-esm",
+      "path": "sdk/dist/ai-automation-sdk.esm.js",
+      "summary": "ES Module build of the AI Automation SDK.",
+      "dependencies": [
+        "sdk-rollup-config"
+      ]
+    },
+    {
+      "id": "ai-automation-sdk-min",
+      "name": "ai-automation-sdk-min",
+      "path": "sdk/dist/ai-automation-sdk.min.js",
+      "summary": "Minified build of the AI Automation SDK.",
+      "dependencies": [
+        "sdk-rollup-config"
+      ]
+    },
+    {
+      "id": "ai-automation-sdk-docs-min",
+      "name": "ai-automation-sdk-docs-min",
+      "path": "docs/ai-automation-sdk.min.js",
+      "summary": "Minified SDK version specifically for documentation pages.",
+      "dependencies": [
+        "ai-automation-sdk-min"
+      ]
+    },
+    {
+      "id": "docs-scripts",
+      "name": "docs-scripts",
+      "path": "docs/scripts/docs.js",
+      "summary": "JavaScript scripts for the documentation website.",
+      "dependencies": [
+        "ai-automation-sdk-docs-min"
+      ]
+    },
+    {
+      "id": "sdk-test-sort",
+      "name": "sdk-test-sort",
+      "path": "sdk/test-sort.js",
+      "summary": "A standalone test script for sorting functionality.",
+      "dependencies": []
+    },
+    {
+      "id": "terser",
+      "name": "terser",
+      "path": "sdk/node_modules/terser",
+      "summary": "JavaScript parser, mangler, and compressor toolkit.",
+      "dependencies": [
+        "acorn",
+        "source-map",
+        "commander",
+        "serialize-javascript"
+      ]
+    },
+    {
+      "id": "acorn",
+      "name": "acorn",
+      "path": "sdk/node_modules/acorn",
+      "summary": "A small, fast, JavaScript-based JavaScript parser.",
+      "dependencies": []
+    },
+    {
+      "id": "source-map",
+      "name": "source-map",
+      "path": "sdk/node_modules/source-map",
+      "summary": "Library for consuming and producing source maps.",
+      "dependencies": []
+    },
+    {
+      "id": "commander",
+      "name": "commander",
+      "path": "sdk/node_modules/commander",
+      "summary": "Node.js command-line interfaces made easy.",
+      "dependencies": []
+    },
+    {
+      "id": "serialize-javascript",
+      "name": "serialize-javascript",
+      "path": "sdk/node_modules/serialize-javascript",
+      "summary": "Serializes JavaScript to a superset of JSON.",
+      "dependencies": []
+    },
+    {
+      "id": "@jridgewell/gen-mapping",
+      "name": "@jridgewell/gen-mapping",
+      "path": "sdk/node_modules/@jridgewell/gen-mapping",
+      "summary": "Generates source maps efficiently.",
+      "dependencies": [
+        "@jridgewell/sourcemap-codec"
+      ]
+    },
+    {
+      "id": "@jridgewell/resolve-uri",
+      "name": "@jridgewell/resolve-uri",
+      "path": "sdk/node_modules/@jridgewell/resolve-uri",
+      "summary": "Resolves URIs for source map processing.",
+      "dependencies": []
+    },
+    {
+      "id": "@jridgewell/source-map",
+      "name": "@jridgewell/source-map",
+      "path": "sdk/node_modules/@jridgewell/source-map",
+      "summary": "A fast and efficient source map library.",
+      "dependencies": [
+        "@jridgewell/sourcemap-codec",
+        "@jridgewell/trace-mapping",
+        "@jridgewell/gen-mapping",
+        "@jridgewell/resolve-uri"
+      ]
+    },
+    {
+      "id": "@jridgewell/sourcemap-codec",
+      "name": "@jridgewell/sourcemap-codec",
+      "path": "sdk/node_modules/@jridgewell/sourcemap-codec",
+      "summary": "Encodes and decodes source map VLQ mappings.",
+      "dependencies": []
+    },
+    {
+      "id": "@jridgewell/trace-mapping",
+      "name": "@jridgewell/trace-mapping",
+      "path": "sdk/node_modules/@jridgewell/trace-mapping",
+      "summary": "Traces mappings within source maps.",
+      "dependencies": [
+        "@jridgewell/sourcemap-codec"
+      ]
+    },
+    {
+      "id": "@types/estree",
+      "name": "@types/estree",
+      "path": "sdk/node_modules/@types/estree",
+      "summary": "TypeScript type definitions for the ESTree AST format.",
+      "dependencies": []
+    },
+    {
+      "id": "buffer-from",
+      "name": "buffer-from",
+      "path": "sdk/node_modules/buffer-from",
+      "summary": "A polyfill for Node.js `Buffer.from()`.",
+      "dependencies": [
+        "safe-buffer"
+      ]
+    },
+    {
+      "id": "randombytes",
+      "name": "randombytes",
+      "path": "sdk/node_modules/randombytes",
+      "summary": "Generates cryptographically strong pseudo-random data.",
+      "dependencies": [
+        "buffer-from"
+      ]
+    },
+    {
+      "id": "safe-buffer",
+      "name": "safe-buffer",
+      "path": "sdk/node_modules/safe-buffer",
+      "summary": "Provides a safer Node.js Buffer API.",
+      "dependencies": []
+    },
+    {
+      "id": "smob",
+      "name": "smob",
+      "path": "sdk/node_modules/smob",
+      "summary": "Small object manipulation library.",
+      "dependencies": []
+    },
+    {
+      "id": "source-map-support",
+      "name": "source-map-support",
+      "path": "sdk/node_modules/source-map-support",
+      "summary": "Adds source map support to stack traces in Node.js.",
+      "dependencies": [
+        "source-map"
+      ]
+    }
+  ],
+  "generated_at": "2026-05-03T19:28:48.135Z"
 }
